@@ -4,6 +4,6 @@ index.ts
 tsconfig.json
 yarn.lock
 test.d.ts
-tests.ts
+test.ts
 test.js
 README.md
