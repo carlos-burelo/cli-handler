@@ -1,0 +1,34 @@
+{
+  "name": "cli-hander",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A command line interface handler for the CLI",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "keywords": [
+    "cli",
+    "command-line",
+    "command-line-interface",
+    "command-line-args",
+    "command-line-arguments",
+    "command-line-parser",
+    "handler"
+  ],
+  "homepage": "https://carlosburelo.tk/cli-hander",
+  "bugs": {
+    "url": "https://github.com/carlos-burelo/cli-handler/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-burelo/cli-hander.git"
+  },
+  "author": "Carlos Burelo",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --tsconfig=tsconfig.json --minify --outdir=./ &&  tsc --emitDeclarationOnly --outDir ./"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "esbuild": "^0.14.36",
+    "typescript": "^4.6.3"
+  }
+}
