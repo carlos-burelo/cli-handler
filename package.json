@@ -1,6 +1,6 @@
 {
   "name": "cli-handler",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "description": "A command line interface handler for the CLI",
   "main": "./index.js",
@@ -24,7 +24,9 @@
   },
   "author": "Carlos Burelo",
   "scripts": {
-    "build": "esbuild index.ts --tsconfig=tsconfig.json --format=cjs --minify --outdir=./ &&  tsc --emitDeclarationOnly --outDir ./"
+    "build": "esbuild index.ts --tsconfig=tsconfig.json --format=cjs --minify --outdir=./",
+    "build:types": "tsc --emitDeclarationOnly --outDir ./",
+    "deploy": "npm run build && npm publish"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
