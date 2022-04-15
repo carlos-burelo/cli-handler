@@ -10,7 +10,7 @@ export interface Directive {
   handler?: (value: string | boolean, flags: Flags) => void
   flags?: string[]
 }
-export type Handler = (value: string | boolean, flags: Flags | {}) => void
+export type Handler = (value: string | boolean, flags: Flags) => void
 
 const inputRe = '(?<value>[^\\s]+)'
 
