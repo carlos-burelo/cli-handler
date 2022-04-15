@@ -3,7 +3,7 @@ interface Flags {
 }
 export interface Directive {
     path: string;
-    description: string;
+    description?: string;
     input?: boolean;
     children?: Directive[];
     handler?: (value: string | boolean, flags: Flags | {}) => void;

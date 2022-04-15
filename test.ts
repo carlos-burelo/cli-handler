@@ -1,11 +1,11 @@
-import { Directive, Handler, parse } from '.';
+import { Directive, Handler, parse } from './index'
 
 const serveHandler: Handler = (value, flags) => {
   console.log({
     value,
     flags,
-  });
-};
+  })
+}
 
 const DIRECTIVES: Directive[] = [
   {
@@ -26,10 +26,18 @@ const DIRECTIVES: Directive[] = [
           console.log({
             value,
             flags,
-          });
+          })
         },
       },
     ],
   },
-];
-parse(DIRECTIVES);
+  {
+    path: 'n|new',
+    description: 'Serve the project',
+    input: true,
+    flags: ['deps$'],
+    handler: serveHandler,
+  },
+]
+
+parse(DIRECTIVES)
