@@ -26,7 +26,7 @@
   "scripts": {
     "build": "esbuild index.ts --tsconfig=tsconfig.json --format=cjs --minify --outdir=./",
     "build:types": "tsc --emitDeclarationOnly --outDir ./",
-    "deploy": "npm run build && npm publish"
+    "deploy": "yarn build && yarn build:types && npm publish"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
